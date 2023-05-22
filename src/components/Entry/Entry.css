@@ -1,0 +1,36 @@
+.entry {
+  border-bottom: solid 1px var(--color-water-10);
+  padding: 2rem 0 2rem;
+}
+
+.entry__text-container {
+  position: relative;
+}
+
+.entry__date-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+}
+
+.entry__star {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.entry__star-filled {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.entry__title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.entry-text {
+  color: var(--color-granite);
+
+}

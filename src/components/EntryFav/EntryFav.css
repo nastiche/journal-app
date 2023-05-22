@@ -1,0 +1,14 @@
+.entry {
+  position: relative;
+  margin: 0 0 1rem;
+}
+
+.entry__star-filled {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.entry__title {
+  margin-bottom: 1rem;
+}
