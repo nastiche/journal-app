@@ -46,10 +46,7 @@ ol li {
 .content {
   margin: auto 1rem;
 }
-.form {
-  display: grid;
-  margin: 1rem auto;
-}
+
 
 .entry-list :last-child {
   border-bottom: none;

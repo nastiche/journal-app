@@ -1,6 +1,7 @@
 import React from "react";
 import "./Entry.css";
-import Star from "./star.svg"
+// import Star from "./star.svg"
+import FavoriteButton from "../FavoriteButton/index.js"
 export function Entry() {
   return (
     <>
@@ -12,7 +13,7 @@ export function Entry() {
           mihi. Et quidem se repellere, idque instituit docere sic omne animal,
           simul atque.
         </p>
-        <img src={Star} className="entry__star" alt="star" />
+        <FavoriteButton />
         </div>
       </li>
     </>

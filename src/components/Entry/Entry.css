@@ -13,18 +13,6 @@
   margin-bottom: 1.3rem;
 }
 
-.entry__star {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.entry__star-filled {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .entry__title {
   margin-bottom: 1rem;
   font-weight: bold;
