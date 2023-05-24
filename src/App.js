@@ -6,8 +6,9 @@ import { Form } from "./components/Form/index.js";
 // import { Textarea } from "./components/Textarea/index.js";
 // import { Button } from "./components/Button/index.js";
 import { Tabs } from "./components/Tabs/index.js";
-import { Entry } from "./components/Entry/index.js";
+// import { Entry } from "./components/Entry/index.js";
 import { Footer } from "./components/Footer/index.js";
+import { EntriesSection } from "./components/EntriesSection/index.js";
 
 function App() {
   return (
@@ -16,10 +17,7 @@ function App() {
       <main className="content">
         <Form />
         <Tabs />
-        <ul className="entry-list">
-          <Entry />
-          <Entry />
-        </ul>
+        <EntriesSection />
       </main>
       <Footer />
     </>
