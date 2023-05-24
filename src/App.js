@@ -14,7 +14,9 @@ import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [entries, setEntries] = useState([...initialEntries]);
-  const [favoriteCount, setFavoriteCount] = useState(0);
+  const [favoriteEntries, setFavoriteEntries] = useState([]);
+  const [entriesToShow, setEntriesToShow] = useState([]);
+
   function handleAddEntry(newEntry) {
     const date = new Date().toLocaleDateString("en-us", {
       dateStyle: "medium",
@@ -28,27 +30,40 @@ function App() {
 
   function handleToggleFavorite(id) {
     let matching = entries.map((entry) =>
-      id === entry.id ? { ...entry, isFavorite: !entry.isFavorite } : entry
+      entry.id === id ? { ...entry, isFavorite: !entry.isFavorite } : entry
     );
     setEntries(matching);
   }
 
-  function countFavorites() {
-    return entries.filter((entry) => entry.isFavorite === true).length;
+  function collectFavorites() {
+    return entries.filter((entry) => entry.isFavorite === true);
   }
 
   useEffect(() => {
-    setFavoriteCount(countFavorites());
+    setFavoriteEntries(collectFavorites());
+    setEntriesToShow(entries);
   }, [entries]);
+
+  useEffect(() => {
+    setEntriesToShow(entries);
+  }, []);
+
+  function clickTab(entries) {
+    setEntriesToShow(entries);
+  }
   return (
     <>
       <Header />
       <main className="content">
         <Form onAddEntry={handleAddEntry} />
-        <Tabs entryCount={entries.length} favoriteCount={favoriteCount} />
+        <Tabs
+          entries={entries}
+          favoriteEntries={favoriteEntries}
+          onTab={clickTab}
+        />
         <EntriesSection
           onToggleFavorite={handleToggleFavorite}
-          entries={entries}
+          entries={entriesToShow}
         />
       </main>
       <Footer />
