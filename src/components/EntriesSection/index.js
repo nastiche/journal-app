@@ -1,9 +1,7 @@
 import React from "react";
 import { Entry } from "../Entry/index.js";
-import { entries } from "../EntriesList/index.js";
 
-export function EntriesSection() {
-  console.log(entries);
+export function EntriesSection({entries}) {
   return (
     <ul className="entry-list">
       {entries.map((entry) => (
