@@ -6,20 +6,22 @@ export function Tabs({ entries, favoriteEntries, onTab }) {
     <>
       <div className="tabs-container">
         <div className="tab">
-          <button
-            onClick={() => onTab(entries)}
-            className="tab-name tab-name--active"
-          >
+          <button onClick={() => onTab(entries)} className="tab-name">
             All entries
           </button>
-          <p className="tabs-badge tabs-badge--active">{entries.length}</p>
+          <p className="tabs-badge">{entries.length}</p>
         </div>
 
         <div className="tab">
-          <button onClick={() => onTab(favoriteEntries)} className="tab-name">
+          <button
+            onClick={() => onTab(favoriteEntries)}
+            className="tab-name tab-name--active"
+          >
             Favorites
           </button>
-          <p className="tabs-badge">{favoriteEntries.length}</p>
+          <p className="tabs-badge tabs-badge--active">
+            {favoriteEntries.length}
+          </p>
         </div>
       </div>
     </>
